@@ -8,15 +8,21 @@ int main() {
 
 	cout << "Welcome to my number program.\n";
 
-	int num, num2, num3;
-	char collector;
+	int num;
+	double dec;
 
-	cin >> num >> collector >> num2 >> num3;
+	dec = 3.14;
+	num = dec;
 
-	cout << "The number is: " << num << endl;
-	cout << "The number is: " << num2 << endl;
-	cout << "The number is: " << num3 << endl;
+	cout << num << endl;
+	cout << dec << endl;
 
-	cout << "collector is : " << collector << endl;
+	dec = num;
+	cout << dec << endl;
+
+	num = 10.0 / 4;
+	cout << num << endl;
+
+
 }
 
