@@ -5,16 +5,16 @@ using namespace std;
 
 
 int main() {
-	cout << "We are going to multiply numbers. " << endl;
-	cout << "4*3=" << 4*3 <<endl;
 
-	int a = 0;
-	cin >> a;
+	cout << "Welcome to my name program.\n";
 
-	a = 67 * a;
+	string name = "Bob";
+	cout << "The name is currently: " << name << endl;
 
-	cout << "a= " << a << endl;
+	cout << "Enter a new name: ";
+	cin >> name;
+	cout << "The name is now: " << name << endl;
 
-	return 0;
+
 }
 
