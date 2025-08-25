@@ -6,15 +6,17 @@ using namespace std;
 
 int main() {
 
-	cout << "Welcome to my name program.\n";
+	cout << "Welcome to my number program.\n";
 
-	string name = "Bob";
-	cout << "The name is currently: " << name << endl;
+	int num, num2, num3;
+	char collector;
 
-	cout << "Enter a new name: ";
-	cin >> name;
-	cout << "The name is now: " << name << endl;
+	cin >> num >> collector >> num2 >> num3;
 
+	cout << "The number is: " << num << endl;
+	cout << "The number is: " << num2 << endl;
+	cout << "The number is: " << num3 << endl;
 
+	cout << "collector is : " << collector << endl;
 }
 
