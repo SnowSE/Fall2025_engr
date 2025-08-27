@@ -9,8 +9,7 @@ int main() {
 
 	int n = 53;
 	int d = 7;
-	double d1 = d;
-	double b = n*n/d1;
+	double b = (double)n*n/d;
 	cout << b << endl;
 
 	string title;
