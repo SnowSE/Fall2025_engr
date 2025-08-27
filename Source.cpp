@@ -20,8 +20,10 @@ int main() {
 	dec = num;
 	cout << dec << endl;
 
-	num = 10.0 / 4;
-	cout << num << endl;
+	int num2 = 10, num3 = 4;
+
+	dec = num2 / num3;
+	cout << dec << endl;
 
 
 }
