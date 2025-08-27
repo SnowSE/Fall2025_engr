@@ -1,29 +1,29 @@
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 
 
 int main() {
 
-	cout << "Welcome to my number program.\n";
+	int n = 53;
+	int d = 7;
+	double d1 = d;
+	double b = n*n/d1;
+	cout << b << endl;
 
-	int num;
-	double dec;
+	string title;
+	string description;
 
-	dec = 3.14;
-	num = dec;
+	cout << "Title: ";
+	cin >> title ;
+	cin.ignore();
+	cout << "Description: ";
+	getline(cin, description);
 
-	cout << num << endl;
-	cout << dec << endl;
-
-	dec = num;
-	cout << dec << endl;
-
-	int num2 = 10, num3 = 4;
-
-	dec = num2 / num3;
-	cout << dec << endl;
+	cout << "Title: |" << title << "|\n";
+	cout << "Description: |" << description << "|\n";
 
 
 }
