@@ -6,23 +6,28 @@ using namespace std;
 
 int main() {
 
-	int n = 53;
-	int d = 7;
-	double b = (double)n*n/d;
-	cout << b << endl;
+	int s;
 
-	string title;
-	string description;
+	s = sizeof(double);
+	cout << "double: " << s << endl;
+	s = sizeof(float);
+	cout << "float: " << s << endl;
 
-	cout << "Title: ";
-	cin >> title ;
-	cin.ignore();
-	cout << "Description: ";
-	getline(cin, description);
+	s = sizeof(int);
+	cout << "int: " << s << endl;
+	s = sizeof(long long);
+	cout << "long long: " << s << endl;
+	s = sizeof(long);
+	cout << "long: " << s << endl;
+	s = sizeof(short);
+	cout << "short: " << s << endl;
+	s = sizeof(bool);
+	cout << "bool: " << s << endl;
+	s = sizeof(char);
+	cout << "char: " << s << endl;
 
-	cout << "Title: |" << title << "|\n";
-	cout << "Description: |" << description << "|\n";
-
+	s = sizeof(string);
+	cout << "string: " << s << endl;
 
 }
 
