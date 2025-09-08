@@ -4,32 +4,17 @@ using namespace std;
 
 int main() {
 
+	string input1;
+	string input2;
 
-	int a;
-	cin >> a;
+	cout << "1: ";
+	getline( cin, input1);
 
-	if (a > 1)
-		if (a < 200)
-			if (a == 100)
-				a++;
-			else
-				a--;
+	//cin.clear();
+	cout << "2: ";
+	cin >> input2;
 
-	if (a == 0) 
-	{
-		cout << "it's 0" << endl;
-	}
-	else if (a > 12) {
-		cout << "That's a big number." << endl;
-		if (a > 100) {
-			cout << "That's a really big number." << endl;
-		}
-	}
-	else 
-	{
-		cout << "not 0" << endl;
-	}
-	cout << a << endl;
-
+	cout << "\n\n";
+	cout << "1 \"" << input1 << "\" \n2 \"" << input2 << "\" \n";
 }
 
