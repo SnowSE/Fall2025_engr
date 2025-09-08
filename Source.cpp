@@ -6,24 +6,10 @@ using namespace std;
 int main() {
 
 	int num;
-	int heads = 0;
-	int tails = 0;
+	cin >> num;
+	for (int i = 0; i < num; i++) {
+		cout << i << endl;
+	}
 
-	auto timer = time(0);
-	//cout << "timer: " << timer << endl;
-	srand(timer);
-
-	//cout << num << endl;
-
-	num = rand();
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
-	cout << rand() % 11 + 10 << endl;
 }
 
