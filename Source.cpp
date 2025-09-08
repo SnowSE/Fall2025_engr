@@ -5,12 +5,14 @@ using namespace std;
 int main() {
 
 	string input1;
+	string temp;
 	string input2;
 
 	cout << "1: ";
-	getline( cin, input1);
+	cin >> input1;
 
-	//cin.clear();
+//	getline(cin, temp);
+
 	cout << "2: ";
 	cin >> input2;
 
