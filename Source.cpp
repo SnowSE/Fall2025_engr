@@ -1,22 +1,29 @@
 #include <iostream>
 #include <string>
+//#include <>
 using namespace std;
 
 int main() {
 
-	string input1;
-	string temp;
-	string input2;
+	int num;
+	int heads = 0;
+	int tails = 0;
 
-	cout << "1: ";
-	cin >> input1;
+	auto timer = time(0);
+	//cout << "timer: " << timer << endl;
+	srand(timer);
 
-//	getline(cin, temp);
+	//cout << num << endl;
 
-	cout << "2: ";
-	cin >> input2;
-
-	cout << "\n\n";
-	cout << "1 \"" << input1 << "\" \n2 \"" << input2 << "\" \n";
+	num = rand();
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
+	cout << rand() % 11 + 10 << endl;
 }
 
