@@ -5,11 +5,12 @@ using namespace std;
 
 int main() {
 
-	int num;
-	cin >> num;
-	for (int i = 0; i < num; i++) {
-		cout << i << endl;
-	}
+	int input = -1;
 
+
+	while (input != 0) {
+
+		cin >> input;
+	}
 }
 
