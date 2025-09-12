@@ -6,31 +6,36 @@ using namespace std;
 
 /*
 	Types of weapons
-	Player Health
-	counter attack
-	more monster
 	defense/ armor
 	random attacks
 	chance to crit
 
+	Player Health
+	counter attack
+
+	more monster
 */
 
 int main() {
 
 	int input = -1;
-	
+
 	int room = 1;
 	bool enemyIsAlive = true;
 
 	int enemyHealth = 50;
+	int playerHealth = 100;
 	int playerAttack = 10;
 	bool hasSword = false;
 
+	srand(time(0));
+
 	while (input != 0) {
 
-		cout << "Your are in Room #" << room << endl;
+		cout << "Your are in Room #" << room <<
+			". You have " << playerHealth << " health" << endl;
 
-		if (enemyIsAlive) 
+		if (enemyIsAlive)
 		{
 			cout << "The enemy has " << enemyHealth << " hitpoints\n";
 		}
@@ -50,7 +55,7 @@ int main() {
 		if (input == 1)
 		{
 			int tempAttack = playerAttack;
-			if (hasSword) 
+			if (hasSword)
 			{
 				tempAttack += 5;
 			}
@@ -60,6 +65,7 @@ int main() {
 			if (enemyHealth <= 0)
 			{
 				enemyIsAlive = false;
+				enemyHealth = 0;
 				cout << "The enemy has died\n";
 			}
 
@@ -77,10 +83,10 @@ int main() {
 				cout << "You find a sword\n";
 				hasSword = true;
 			}
-		} 
+		}
 		else if (input == 3)
 		{
-			if (hasSword) 
+			if (hasSword)
 			{
 				cout << "You have a sword\n";
 			}
@@ -96,6 +102,28 @@ int main() {
 			enemyHealth = 50 + (room * 10);
 		}
 
+		if (enemyIsAlive)
+		{
+			cout << "The monster attacks\n";
+			int attackSuccess = rand() % 100;
+			if (attackSuccess > 50)
+			{
+				cout << "The monster hits you for " << room << " damage.\n";
+				playerHealth -= room;
+			}
+			else
+			{
+				cout << "You dodged.";
+			}
+		}
+
+		cout << endl;
+
+		if (playerHealth <= 0) 
+		{
+			cout << "You died on room #" << room << endl;
+			input = 0;
+		}
 	}
 }
 
