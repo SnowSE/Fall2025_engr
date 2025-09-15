@@ -16,7 +16,29 @@ using namespace std;
 	more monster
 */
 
-int main() {
+void printMenu(int room, int playerHealth, bool enemyIsAlive, int enemyHealth)
+{
+	cout << "Your are in Room #" << room <<
+		". You have " << playerHealth << " health" << endl;
+
+	if (enemyIsAlive)
+	{
+		cout << "The enemy has " << enemyHealth << " hitpoints\n";
+	}
+	else
+	{
+		cout << "There is a dead monster here.\n";
+	}
+
+	cout << "Choose and option." << endl;
+	cout << "0. quit\n";
+	cout << "1. Attack\n";
+	cout << "2. Investigate\n";
+	cout << "3. Inventory\n";
+	cout << "4. Go to next room\n";
+}
+
+int main1() {
 
 	int input = -1;
 
@@ -32,24 +54,8 @@ int main() {
 
 	while (input != 0) {
 
-		cout << "Your are in Room #" << room <<
-			". You have " << playerHealth << " health" << endl;
+		printMenu(room, playerHealth, enemyIsAlive, enemyHealth);
 
-		if (enemyIsAlive)
-		{
-			cout << "The enemy has " << enemyHealth << " hitpoints\n";
-		}
-		else
-		{
-			cout << "There is a dead monster here.\n";
-		}
-
-		cout << "Choose and option." << endl;
-		cout << "0. quit\n";
-		cout << "1. Attack\n";
-		cout << "2. Investigate\n";
-		cout << "3. Inventory\n";
-		cout << "4. Go to next room\n";
 		cin >> input;
 
 		if (input == 1)
@@ -125,5 +131,7 @@ int main() {
 			input = 0;
 		}
 	}
+
+	return 0;
 }
 
