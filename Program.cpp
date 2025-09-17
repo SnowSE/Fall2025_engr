@@ -4,33 +4,22 @@
 //#include <>
 using namespace std;
 
-void bar();
-int add(int a, int b) {
-	a = a * 2;
-	cout << "add() a: " << a << endl;
-	int c = a + b;
-	return c;
-}
+int sum(int n);
 
 int main() {
 
-	int a = 3 + 4;
-
-	int sum2 = add(add(a, 4), 2);
-	
-	cout<< "main() a: " << a << endl;
-	cout << sum2 << endl;
+	int i = 0;
+	while (i++ < 10);
+	{
+		cout << "hey \n";
+		i++;
+	}
 
 	return 0;
 }
 
 
 
-void bar() {
-
-
-	return;
-}
 
 
 
@@ -42,5 +31,12 @@ void bar() {
 
 
 
+/*
+	int a = 97;
+	char c = a;
 
+	cout << c << endl;
+	cout << a << endl;
+	cout << (char)a << endl;
 
+*/
