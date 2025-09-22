@@ -4,39 +4,18 @@
 //#include <>
 using namespace std;
 
-int sum(int n);
-
 int main() {
 
-	int i = 0;
-	while (i++ < 10);
-	{
-		cout << "hey \n";
-		i++;
+	double rainfall[3];
+
+	for (int i = 0; i < 3; i++) {
+		cin >> rainfall[i];
 	}
 
-	return 0;
+	double sum = 0;
+	for (int i = 0; i < 3; i++) {
+		sum += rainfall[i];
+	}
+	cout << sum;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-	int a = 97;
-	char c = a;
-
-	cout << c << endl;
-	cout << a << endl;
-	cout << (char)a << endl;
-
-*/
