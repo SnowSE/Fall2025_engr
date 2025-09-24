@@ -38,6 +38,21 @@ void printMenu(int room, int playerHealth, bool enemyIsAlive, int enemyHealth)
 	cout << "4. Go to next room\n";
 }
 
+int enemyTurn(int room, bool enemyIsAlive) {
+	if (enemyIsAlive)
+	{
+		cout << "The monster attacks\n";
+		int attackSuccess = rand() % 100;
+		if (attackSuccess > 50)
+		{
+			cout << "The monster hits you for " << room << " damage.\n";
+			return room;
+		}
+		cout << "You dodged.\n";
+		return 0;
+	}
+}
+
 int main1() {
 
 	int input = -1;
@@ -108,20 +123,8 @@ int main1() {
 			enemyHealth = 50 + (room * 10);
 		}
 
-		if (enemyIsAlive)
-		{
-			cout << "The monster attacks\n";
-			int attackSuccess = rand() % 100;
-			if (attackSuccess > 50)
-			{
-				cout << "The monster hits you for " << room << " damage.\n";
-				playerHealth -= room;
-			}
-			else
-			{
-				cout << "You dodged.";
-			}
-		}
+		playerHealth = playerHealth - enemyTurn(room, enemyIsAlive);
+		
 
 		cout << endl;
 
