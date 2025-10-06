@@ -1,34 +1,35 @@
 
 #include <iostream>
 #include <string>
-//#include <>
+#include <climits>
+
 using namespace std;
 
-double ComputeAverage(double arr[], int size) {
-	double sum = 0;
-	for (int i = 0; i < size*2; i++) {
-		sum += arr[i];
-	}
-	return sum/size;
+int i;
+
+int add(int num) {
+	num += 1000000000;
+	int a = 20;
+	int i = 3;
+	i += 2;
+	cout << num << endl;
+	return i;
 }
 
 int main() {
-	
-	const int MONTHS = 4;
-	double rainfall[MONTHS] = {3.22, 4.78, 0.1, 34};
+	srand(time(0));
 
-	int values[MONTHS] = {  };
-
-	//for (int i = 0; i < MONTHS; i++) {
-	//	cin >> rainfall[i];
-	//}
-
-	double sum = 0;
-	for (int i = 0; i < MONTHS; i++) {
-		sum += rainfall[i];
+	for (int j = 0; j < 10; j++) {
+		cout << j << ": " << rand() % 256 << endl;
 	}
-	cout << "Sum: " << sum << endl;
 
-	cout << "Average: " << ComputeAverage(rainfall, MONTHS) << endl;
+	int num = 7;
+	int a = 100;
+	i = 0;
 
+	add(num);
+	num += i;
+
+	cout << num << endl;
+	cout << a;
 }
