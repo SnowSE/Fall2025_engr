@@ -5,7 +5,7 @@
 #include <ctime>
 using namespace std;
 
-int main() {
+int main3() {
 	// Seed the random number generator
 	srand(time(0));
 

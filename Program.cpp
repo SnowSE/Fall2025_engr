@@ -16,7 +16,7 @@ int add(int num) {
 	return i;
 }
 
-int main2() {
+int main() {
 	srand(time(0));
 
 	for (int j = 0; j < 10; j++) {
