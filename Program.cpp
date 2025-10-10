@@ -16,7 +16,7 @@ int add(int num) {
 	return i;
 }
 
-int main() {
+int main2() {
 	srand(time(0));
 
 	for (int j = 0; j < 10; j++) {
@@ -24,6 +24,7 @@ int main() {
 	}
 
 	int num = 7;
+	unsigned int num2 = 23;
 	int a = 100;
 	i = 0;
 
@@ -32,4 +33,5 @@ int main() {
 
 	cout << num << endl;
 	cout << a;
+	return 0;
 }
