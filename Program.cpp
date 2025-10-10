@@ -5,33 +5,35 @@
 
 using namespace std;
 
-int i;
 
-int add(int num) {
-	num += 1000000000;
-	int a = 20;
-	int i = 3;
-	i += 2;
-	cout << num << endl;
-	return i;
-}
 
 int main() {
-	srand(time(0));
+	int choice;
 
-	for (int j = 0; j < 10; j++) {
-		cout << j << ": " << rand() % 256 << endl;
+	cin >> choice;
+
+
+	switch (choice)
+	{
+	case 2:
+	case 5:
+		cout << "You typed 2 or 5";
+		break;
+	case 3:
+		cout << "You typed 3";
+	break;
+	case 'a':
+	case 'A':
+		cout << "You typed a";
+		break;
+	case -21:
+		cout << "You typed -21";
+	case 13:
+		cout << "You typed -13";
+	default:
+		cout << "I'm sorry, Dave, I can't do that.";
+		break;
 	}
 
-	int num = 7;
-	unsigned int num2 = 23;
-	int a = 100;
-	i = 0;
 
-	add(num);
-	num += i;
-
-	cout << num << endl;
-	cout << a;
-	return 0;
 }
