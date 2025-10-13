@@ -8,32 +8,22 @@ using namespace std;
 
 
 int main() {
-	int choice;
+	int target;
+	cin >> target;
 
-	cin >> choice;
-
-
-	switch (choice)
+	int arr[] = { 1 ,3,5,67,8,9,12,3,45,99 };
+	int foundindex = -1;
+	for (int i = 0; i < 10; i++)
 	{
-	case 2:
-	case 5:
-		cout << "You typed 2 or 5";
-		break;
-	case 3:
-		cout << "You typed 3";
-	break;
-	case 'a':
-	case 'A':
-		cout << "You typed a";
-		break;
-	case -21:
-		cout << "You typed -21";
-	case 13:
-		cout << "You typed -13";
-	default:
-		cout << "I'm sorry, Dave, I can't do that.";
-		break;
+		if (arr[i] == target){
+			foundindex = i;
+			break;
+		}
 	}
-
-
+	if (foundindex == -1){
+		cout << "we didn't find it";
+	}
+	else {
+		cout << "It was found at position " << foundindex;
+	}
 }
