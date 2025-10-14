@@ -14,6 +14,8 @@ using namespace std;
 	counter attack
 
 	more monster
+
+	console clear
 */
 
 void printMenu(int room, int playerHealth, bool enemyIsAlive, int enemyHealth)
@@ -38,6 +40,18 @@ void printMenu(int room, int playerHealth, bool enemyIsAlive, int enemyHealth)
 	cout << "4. Go to next room\n";
 }
 
+int PlayerAttack(int playerAttack, bool hasSword, int enemyHealth) {
+	int tempAttack = playerAttack;
+	if (hasSword)
+	{
+		tempAttack += 5;
+	}
+	enemyHealth = enemyHealth - tempAttack;
+	cout << "You attack for " << tempAttack << " damage.\n";
+	cout << "The enemy has " << enemyHealth << " hitpoints\n";
+	return enemyHealth;
+}
+
 int enemyTurn(int room, bool enemyIsAlive) {
 	if (enemyIsAlive)
 	{
@@ -53,7 +67,7 @@ int enemyTurn(int room, bool enemyIsAlive) {
 	}
 }
 
-int main1() {
+int main() {
 
 	int input = -1;
 
@@ -73,26 +87,19 @@ int main1() {
 
 		cin >> input;
 
-		if (input == 1)
+		switch (input)
 		{
-			int tempAttack = playerAttack;
-			if (hasSword)
-			{
-				tempAttack += 5;
-			}
-			enemyHealth = enemyHealth - tempAttack;
-			cout << "You attack for " << tempAttack << " damage.\n";
-			cout << "The enemy has " << enemyHealth << " hitpoints\n";
+		case 1:
+			enemyHealth = PlayerAttack(playerAttack, hasSword, enemyHealth);
 			if (enemyHealth <= 0)
 			{
 				enemyIsAlive = false;
 				enemyHealth = 0;
 				cout << "The enemy has died\n";
 			}
+			break;
 
-		}
-		else if (input == 2)
-		{
+		case 2:
 			if (enemyIsAlive)
 			{
 				cout << "You find a scary monster\n";
@@ -104,9 +111,9 @@ int main1() {
 				cout << "You find a sword\n";
 				hasSword = true;
 			}
-		}
-		else if (input == 3)
-		{
+			break;
+
+		case 3:
 			if (hasSword)
 			{
 				cout << "You have a sword\n";
@@ -115,12 +122,18 @@ int main1() {
 			{
 				cout << "You do not have a sword\n";
 			}
-		}
-		else if (input == 4 && !enemyIsAlive)
-		{
-			room++;
-			enemyIsAlive = true;
-			enemyHealth = 50 + (room * 10);
+			break;
+
+		case 4:
+			if (!enemyIsAlive) {
+				room++;
+				enemyIsAlive = true;
+				enemyHealth = 50 + (room * 10);
+			}
+			break;
+
+		default:
+			break;
 		}
 
 		playerHealth = playerHealth - enemyTurn(room, enemyIsAlive);

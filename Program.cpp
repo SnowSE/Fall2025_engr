@@ -7,23 +7,20 @@ using namespace std;
 
 
 
-int main() {
-	int target;
-	cin >> target;
+int main1() {
 
-	int arr[] = { 1 ,3,5,67,8,9,12,3,45,99 };
-	int foundindex = -1;
-	for (int i = 0; i < 10; i++)
-	{
-		if (arr[i] == target){
-			foundindex = i;
-			break;
-		}
+	cout << (7 ^ 13) << endl;
+
+	int target = 0;
+	//cin >> target;
+
+	int value = target % 2 == 0 ? target / 2 : (target + 1) * 2;
+
+	cout << value;
+
+	if (value > 12 || value % 3 == 0) {
+
 	}
-	if (foundindex == -1){
-		cout << "we didn't find it";
-	}
-	else {
-		cout << "It was found at position " << foundindex;
-	}
+
+	return 0;
 }
