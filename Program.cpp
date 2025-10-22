@@ -3,38 +3,42 @@
 #include <string>
 #include <climits>
 #include <algorithm>
+#include <fstream>
 
 using namespace std;
 
-string ToLower(string input);
 
 
 int main() {
 
-	int *num = new int [100];
-	for (int i = 0; i < 100; i++) {
-		cout << "|" << num[i] << "|"<< endl;
-	}
-	string choice = "hey whWhat!!";
+	ifstream inputfile;
+	//inputfile.open("numbers3.txt");
 
-	choice = ToLower(choice);
-
-	if (choice.find("what") >= 0) {
-		cout << "You selected seven" << endl;
+	if (!inputfile) {
+		cout << "could not open file" << endl;
+		return -1;
 	}
-	cout << choice << endl;
+
+	const int MAX_SIZE = 40;
+	int arr[MAX_SIZE];
+
+	int num;
+	int size = 0;
+	while (inputfile >> num && size < MAX_SIZE) {
+		arr[size] = num;
+		size++;
+	}
+
+	inputfile.close();
+
+
+	for (int i = 0; i < size; i++)
+	{
+		cout << arr[i] << endl;
+	}
 
 
 	return 0;
 }	
 
-string ToLower(string input) {
-	string lower(input.size(), ' ');
-	for (int i = 0; i < input.size(); i++) {
-		lower[i] = 
-			input[i] >= 'A' && input[i] <= 'Z' 
-			? input[i] + 'a' - 'A'
-			: input[i];
-	} 
-	return lower;
-}
+
