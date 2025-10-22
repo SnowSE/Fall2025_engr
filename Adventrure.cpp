@@ -67,7 +67,7 @@ int enemyTurn(int room, bool enemyIsAlive) {
 	}
 }
 
-int main() {
+int main4() {
 
 	int input = -1;
 
