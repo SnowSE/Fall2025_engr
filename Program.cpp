@@ -12,12 +12,15 @@ using namespace std;
 int main() {
 
 	ifstream inputfile;
-	//inputfile.open("numbers3.txt");
+	inputfile.open("numbers.txt");
 
-	if (!inputfile) {
+	if (!inputfile.is_open()) {
 		cout << "could not open file" << endl;
 		return -1;
 	}
+	int first;
+	inputfile >> first;
+	cout << first;
 
 	const int MAX_SIZE = 40;
 	int arr[MAX_SIZE];
