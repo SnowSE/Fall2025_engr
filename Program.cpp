@@ -27,10 +27,15 @@ int main() {
 
 	int num;
 	int size = 0;
-	while (inputfile >> num && size < MAX_SIZE) {
+
+
+
+	while (inputfile >> num) {
 		arr[size] = num;
 		size++;
 	}
+
+
 
 	inputfile.close();
 
