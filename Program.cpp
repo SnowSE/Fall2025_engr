@@ -6,20 +6,24 @@
 
 using namespace std;
 
+string superReplace(string full, string sub, string value, bool replaceAll = false) {
 
-//double add(double a, double b) { return a + b; }
-
-int add(int a, int b) { return add(a, b, 0); }
-int add(int a, int b, int c) { return add(a, b, c, 0); }
-int add(int a, int b, int c, int d) { return a + b + c + d; }
-
+	int i = full.find(sub);
+	while (i > -1) {
+		full.replace(i, sub.size(), value);
+		i = full.find(sub);
+		if (!replaceAll)
+			break;
+	}
+	return full;
+}
 
 
 
 int main() {
-	cout << add(3, 4) << endl;
-	cout << add(3, 4, 56) << endl;
-	cout << add(3, 4, 56, 27) << endl;
+	string text = "the initial and final positions in a range";
+	text = superReplace(text, "a", "A", true);
+	cout << text;
 	return 0;
-}	
+}
 
