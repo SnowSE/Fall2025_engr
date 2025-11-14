@@ -11,10 +11,10 @@ using namespace std;
 
 int main() {
 
-	int a[3] = { 7,12,16 };
-	int* ptr = a;
+	int a = 8;
+	int* ptr = &a;
 
-	cout << ptr;
+	cout << a+*ptr;
 
 	return 0;
 }
