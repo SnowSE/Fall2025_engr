@@ -7,14 +7,29 @@
 
 using namespace std;
 
+struct Point { 
+	int X; 
+	int Y; 
+};
 
 
 int main() {
 
-	int a = 8;
-	int* ptr = &a;
+	Point player = { 1,2 };
+	Point monster = { 1,2 };
 
-	cout << a+*ptr;
+	// playerX = 3;
+	player.X = 3;
+	player.Y = 3;
+	monster.X = 3;
+
+	if (player.X == monster.X && player.Y == monster.Y) {
+		cout << "You got eaten.";
+	}
+	else {
+		cout << "You got away.";
+	}
+
 
 	return 0;
 }
