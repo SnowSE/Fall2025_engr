@@ -12,25 +12,33 @@ struct Point {
 	int Y; 
 };
 
+void printArray(int arr[], int size) {
+	for (int i = 0; i < size; i++)
+	{
+		cout << arr[i] << ", ";
+	}
+	cout << endl;
+}
 
 int main() {
+	const int SIZE = 10;
+	int list[] = { 25,34, 4,17,44,5,7,9,18,3 };
 
-	Point player = { 1,2 };
-	Point monster = { 1,2 };
-
-	// playerX = 3;
-	player.X = 3;
-	player.Y = 3;
-	monster.X = 3;
-
-	if (player.X == monster.X && player.Y == monster.Y) {
-		cout << "You got eaten.";
+	printArray(list, SIZE);
+	for (int j = 0; j < SIZE - 1; j++) {
+		for (int i = 0; i < SIZE - 1 - j; i++)
+		{
+			if (list[i] > list[i + 1]) {
+				int temp = list[i];
+				list[i] = list[i + 1];
+				list[i + 1] = temp;
+			}
+		printArray(list, SIZE);
+		}
+		cout << j << endl;
 	}
-	else {
-		cout << "You got away.";
-	}
-
 
 	return 0;
 }
+
 
