@@ -24,6 +24,9 @@ int main() {
 	const int SIZE = 10;
 	int list[] = { 25,34, 4,17,44,5,7,9,18,3 };
 
+
+
+
 	printArray(list, SIZE);
 	for (int j = 0; j < SIZE - 1; j++) {
 		for (int i = 0; i < SIZE - 1 - j; i++)
